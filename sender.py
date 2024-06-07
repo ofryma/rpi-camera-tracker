@@ -6,6 +6,7 @@ import struct
 def main():
     # Define the socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Add this line
     host_ip = '0.0.0.0'  # Listen on all available interfaces
     port = 9999
     socket_address = (host_ip, port)
