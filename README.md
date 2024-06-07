@@ -6,7 +6,7 @@
 ssh ofry@mserver
 ```
 ```
-sudo apt-get update && sudo apt update && sudo apt upgrade && sudo apt install git && sudo apt-get install libgl1-mesa-glx
+sudo apt-get update && sudo apt update && sudo apt install git && sudo apt-get install libgl1-mesa-glx
 ```
 ```
 sudo reboot
@@ -23,6 +23,23 @@ sudo apt-get install xrdp && sudo apt-get install tightvncserver && sudo systemc
 Find the rpi ip address:
 ```sh
 ifconfig
+```
+
+add a user
+```
+sudo adduser ofryma
+sudo usermod -aG sudo ofryma && groups ofryma
+```
+
+Editing the sudoers file
+open the sudoers file using the command:
+```
+sudo visudo
+```
+
+Add this line with the name of the new user:
+```
+ofryma ALL=(ALL:ALL) ALL
 ```
 
 ### On windows
