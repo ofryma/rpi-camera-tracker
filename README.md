@@ -56,3 +56,15 @@ sudo kill -9 <PID>
 ```
 Replace <PID> with the actual process ID you found.
 
+
+## Camera Configuration
+
+### Step 1: Install Camera Utilities
+You need to install the libraspberrypi-bin package, which includes the raspistill command:
+```
+sudo apt-get install libraspberrypi-bin
+```
+Try to take an image with this command:
+```
+rpicam-still --output test.jpg
+```
